@@ -12,6 +12,8 @@ const listingRoute=require("./routes/listing")
 const reviewRoute=require("./routes/review")
 const userRouter=require("./routes/user")
 const { setUser } = require("./middlewares/auth");
+const { index } = require("./controllers/listingsController")
+const wrapAsync = require("./utils/wrapAsync")
 
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "views"))
@@ -60,9 +62,7 @@ connectDB().then(() => {
 })
 
 //Root Route
-app.get("/", (req, res) => {
-    res.redirect("/listings")
-})
+app.get("/", wrapAsync(index))
 
 
 app.use("/listings",listingRoute)
