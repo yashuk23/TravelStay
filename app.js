@@ -61,7 +61,7 @@ connectDB().then(() => {
 
 //Root Route
 app.get("/", (req, res) => {
-    res.send("I am Root")
+    res.redirect("/listings")
 })
 
 
