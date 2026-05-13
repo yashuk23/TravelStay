@@ -1,9 +1,31 @@
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
     'use strict'
+    const maxUploadSize = 4 * 1024 * 1024
 
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll('.needs-validation')
+    const fileInputs = document.querySelectorAll('input[type="file"][data-max-file-size]')
+
+    fileInputs.forEach((input) => {
+        input.addEventListener('change', () => {
+            const [file] = input.files
+
+            if (!file) {
+                input.setCustomValidity('')
+                return
+            }
+
+            if (file.size > maxUploadSize) {
+                input.value = ''
+                input.setCustomValidity('Please upload an image smaller than 4 MB.')
+                window.alert('Image is too large for deployment upload limits. Please choose a file under 4 MB.')
+                return
+            }
+
+            input.setCustomValidity('')
+        })
+    })
 
     // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
