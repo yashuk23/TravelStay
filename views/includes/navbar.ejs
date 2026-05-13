@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md sticky-top shadow-sm main-navbar">
+  <div class="container-fluid px-3 px-md-4 nav-shell">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center brand-wrap" href="/">
+      <span class="brand-icon">
+        <i class="fa-regular fa-compass"></i>
+      </span>
+      <span class="brand-copy">
+        <span class="fw-semibold brand-title">Wanderlust</span>
+        <small class="brand-tagline">Find stays worth the story</small>
+      </span>
+    </a>
+
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <!-- LEFT SIDE LINKS -->
+      <div class="navbar-nav me-auto gap-md-3 text-center nav-links-wrap">
+        <a class="nav-link active" href="/">Home</a>
+        <a class="nav-link" href="/listings">Explore</a>
+        <a class="nav-link nav-cta" href="/listings/new">Add Listing</a>
+      </div>
+
+      <div class="navbar-nav ms-auto gap-md-3 text-center nav-links-wrap">
+        <% if(!currUser) { %>
+          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link signup-btn" href="/signup">Signup</a>
+          <% } else { %>
+            <a class="nav-link logout-btn" href="/logout">Logout</a>
+            <% } %>
+      </div>
+
+    </div>
+  </div>
+</nav>

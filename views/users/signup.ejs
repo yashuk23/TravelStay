@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<!-- Hero Section -->
+<section class="hero-panel">
+    <p class="eyebrow">Join us</p>
+    <h1 class="page-title">Create Your Account</h1>
+    <p class="page-subtitle">
+        Sign up to explore listings and enjoy a seamless experience.
+    </p>
+</section>
+
+<!-- Signup Section -->
+<section class="component-panel">
+
+    <div class="form-shell shadow-sm">
+
+        <!-- Form Container (FIXED ALIGNMENT) -->
+        <div class="form-container">
+
+            <form action="/signup" method="POST">
+
+                <!-- Username -->
+                <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control" placeholder="Enter username" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <button type="submit" class="btn add-btn">
+                        Sign Up
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- Login Link -->
+            <p class="login-text">
+                Already have an account?
+                <a href="/login">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>

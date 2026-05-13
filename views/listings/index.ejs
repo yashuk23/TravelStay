@@ -1,0 +1,33 @@
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+        <section class="page-panel hero-panel">
+            <p class="eyebrow">Curated stays</p>
+            <h1 class="page-title">All Listings</h1>
+            <p class="page-subtitle">Discover handpicked places with a cleaner, more professional browsing experience.
+            </p>
+        </section>
+
+        <section class="component-panel listing-grid-panel">
+            <div class="row g-4">
+                <% for(let listing of allListings){ %>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <a href="/listings/<%= listing._id %>" class="listing-link">
+                            <div class="card h-100 shadow-sm listing-card">
+                                <img src="<%= listing.image.url %>" class="card-img-top"
+                                    style="height:250px; object-fit:cover;">
+
+                                <div class="card-body">
+                                    <div class="listing-title">
+                                        <%= listing.title %>
+                                    </div>
+                                    <div class="listing-price">Price: ₹ <%= listing.price.toLocaleString("en-IN") %>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <% } %>
+            </div>
+        </section>
+    </body>

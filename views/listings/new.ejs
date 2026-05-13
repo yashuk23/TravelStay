@@ -1,0 +1,52 @@
+<%- layout("./layouts/boilerplate.ejs") %>
+
+<body>
+    <section class="page-panel form-panel-header">
+        <p class="eyebrow">Create</p>
+        <h1 class="page-title">Create New Listing</h1>
+        <p class="page-subtitle">Fill in the details below to add a polished new property listing.</p>
+    </section>
+
+    <div class="row">
+        <div class="col-12 col-md-8 col-lg-6 mx-auto">
+            <form action="/listings/create" method="POST" class="needs-validation form-shell" novalidate enctype="multipart/form-data">
+
+                <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input type="text" name="listing[title]" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea name="listing[description]" required class="form-control" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Upload Image</label>
+                    <input type="file" name="image" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Location</label>
+                    <input type="text" name="listing[location]" required class="form-control" required>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label">Price</label>
+                        <input type="number" name="listing[price]" required class="form-control" required>
+                    </div>
+
+                    <div class="mb-3 col-md-6">
+                        <label class="form-label">Country</label>
+                        <input type="text" name="listing[country]" required class="form-control" required>
+                    </div>
+                </div>
+
+                <button class="btn btn-dark add-btn w-100">Add</button>
+`
+            </form>
+        </div>
+    </div>
+</body>
+

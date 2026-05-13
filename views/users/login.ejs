@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust - Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-panel">
+        <p class="eyebrow">Welcome back</p>
+        <h1 class="page-title">Login to Your Account</h1>
+        <p class="page-subtitle">
+            Access your listings and personalized dashboard.
+        </p>
+    </section>
+
+    <!-- Login Section -->
+    <section class="component-panel">
+
+        <div class="form-shell shadow-sm">
+
+            <!-- Form Container -->
+            <div class="form-container">
+
+                <form action="/login" method="POST">
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control" placeholder="Enter password"
+                            required>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <button type="submit" class="btn add-btn">
+                            Login
+                        </button>
+                    </div>
+
+                </form>
+
+                <!-- Signup Link -->
+                <p class="login-text">
+                    Don’t have an account?
+                    <a href="/signup">Sign up</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
