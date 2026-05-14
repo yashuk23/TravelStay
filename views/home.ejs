@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="home-hero">
+        <div class="home-copy">
+            <p class="eyebrow">Welcome to Wanderlust</p>
+            <h1 class="home-title">Find memorable stays without wasting time on average listings.</h1>
+            <p class="home-subtitle">
+                Wanderlust helps travelers explore curated places, compare destinations, and discover stays worth
+                booking.
+                Browse authentic property details, check pricing quickly, and move straight into the listings that match
+                your trip.
+            </p>
+
+            <div class="home-actions">
+                <a href="/listings" class="btn home-explore-btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="home-highlight component-panel">
+            <div class="highlight-grid">
+                <article class="highlight-card">
+                    <span class="highlight-icon"><i class="fa-solid fa-route"></i></span>
+                    <h2>Discover destinations</h2>
+                    <p>Browse handpicked stays across different locations with a clear and focused listing experience.
+                    </p>
+                </article>
+
+                <article class="highlight-card">
+                    <span class="highlight-icon"><i class="fa-solid fa-house"></i></span>
+                    <h2>Review listing details</h2>
+                    <p>Check images, pricing, and location information before deciding which property deserves your
+                        time.</p>
+                </article>
+
+                <article class="highlight-card">
+                    <span class="highlight-icon"><i class="fa-solid fa-star"></i></span>
+                    <h2>Plan better stays</h2>
+                    <p>Use reviews and listing insights to choose stays that fit your travel plans with less guesswork.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <%- include("./includes/footer.ejs") %>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <script src="/js/scripts.js"></script>
+</body>

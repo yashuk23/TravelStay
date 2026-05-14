@@ -843,3 +843,126 @@ h1 {
 .logout-btn:hover {
     background: linear-gradient(135deg, #b02a37, #e5533d) !important;
 }
+
+.home-hero {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    min-height: calc(100vh - 12rem);
+    padding: 2.5rem 0 1rem;
+}
+
+.home-copy {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-title {
+    font-size: clamp(2.8rem, 6vw, 4.9rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: var(--ink);
+    margin: 0;
+}
+
+.home-subtitle {
+    max-width: 46rem;
+    margin: 1.15rem auto 0;
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--muted);
+}
+
+.home-actions {
+    margin-top: 1.8rem;
+}
+
+.home-explore-btn {
+    background: linear-gradient(135deg, var(--brand), #ff9a7d) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 999px !important;
+    padding: 0.95rem 2rem !important;
+    font-weight: 700 !important;
+    box-shadow: var(--shadow-lift);
+}
+
+.home-explore-btn:hover {
+    background: linear-gradient(135deg, var(--brand-deep), #ff8d6d) !important;
+    transform: translateY(-2px);
+}
+
+.home-highlight {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.4rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-soft);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.highlight-card {
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(24, 33, 47, 0.06);
+    box-shadow: 0 16px 35px rgba(17, 24, 39, 0.06);
+}
+
+.highlight-card h2 {
+    font-size: 1.12rem;
+    font-weight: 700;
+    margin: 1rem 0 0.6rem;
+}
+
+.highlight-card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.highlight-icon {
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255, 107, 87, 0.16), rgba(28, 140, 122, 0.18));
+    color: var(--accent);
+    font-size: 1.15rem;
+}
+
+@media (max-width: 991px) {
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-hero {
+        min-height: auto;
+        padding-top: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-title {
+        font-size: 2.35rem;
+    }
+
+    .home-subtitle {
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+    .home-explore-btn {
+        width: 100%;
+    }
+}
